@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta chatset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale= 1.0">
+        <title>Threat Trackers</title>
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <div class="container">
+        <header>
+            <a href="#" class="logo" >Threat<span>Trackers</span></a>
+            <ul>
+                <li><a href="#" class="active">Home</a></li>
+                <li><a href="#" class="">Services</a></li>
+                <li><a href="#" class="">About</a></li>
+                <li><a href="#" class="">Contact</a></li>
+            </ul>
+        </header>
+ 
+    <div class="content">
+        <div class="bannerText" id="slideshowText">
+            <div class="active">
+                <h2>
+                    What is <br>
+                    <span>Malware</span>?
+                </h2>
+                <p>
+                    Malware is a term used to refer to any type of malicious software designed to infiltrate and harm a computer system, network, or device without the knowledge or consent of the user. It is a broad term that encompasses a variety of harmful software, including viruses, worms, Trojans, spyware, adware, and ransomware.
+                </p>
+                <a href="#" >Read More</a>
+            </div>
+            <div >
+                <h2>
+                    Types of <br>
+                    <span>Malware</span>?
+                </h2>
+                <p>
+                    Malware is a term used to refer to any type of malicious software designed to infiltrate and harm a computer system, network, or device without the knowledge or consent of the user. It is a broad term that encompasses a variety of harmful software, including viruses, worms, Trojans, spyware, adware, and ransomware.
+                </p>
+                <a href="#" >Read More</a>
+            </div>
+            <div>
+                <h2>
+                Example of <br>
+                    <span>Malware</span>?
+                </h2>
+                <p>
+                    Malware is a term used to refer to any type of malicious software designed to infiltrate and harm a computer system, network, or device without the knowledge or consent of the user. It is a broad term that encompasses a variety of harmful software, including viruses, worms, Trojans, spyware, adware, and ransomware.
+                </p>
+                <a href="#" >Read More</a>
+            </div>
+        </div>
+<div class="bannerImg" id="slideshow">
+    <img src="image/computervirus.png" class="active">
+    <img src="image/computer-virus.png">
+    <img src="image/facebook.png">
+</div>
+    </div>
+    <div class="icons">
+    <ul class="sci">
+        <li>
+<a href="#"><img src="image/facebook.png" alt=""></a>
+        </li>
+        <li>
+            <a href="#"><img src="image/instagram.png" alt=""></a>
+                    </li>
+    </ul>
+    <ul class="controls">
+        <li>
+            <a ><img src="image/back.png" onclick="backSlide(); backSlideText();"></a>
+        </li>
+        <li>
+            <a ><img src="image/next.png"onclick="nextSlide(); nextSlideText();" ></a>
+        </li>
+    </ul>
+    </div>
+</div>
+<script type="text/javascript">
+    var slideshow = document.getElementById('slideshow');
+    var slides = slideshow.getElementsByTagName('img');
+    var index = 0;
+    function nextSlide()
+    {
+slides[index].classList.remove('active');
+index = (index + 1) % slides.length;
+slides[index].classList.add('active');
+
+    }
+
+    function backSlide()
+    {
+        slides[index].classList.remove('active');
+
+index = (index - 1 + slides.length) % slides.length;
+slides[index].classList.add('active');
+
+    }
+
+
+    var slideshowText = document.getElementById('slideshowText');
+    var slidesText = slideshowText.getElementsByTagName('div');
+    var i = 0;
+    function nextSlideText()
+    {
+slidesText[i].classList.remove('active');
+i= (i+ 1) % slidesText.length;
+slidesText[i].classList.add('active');
+
+    }
+
+    function backSlideText()
+    {
+        slidesText[i].classList.remove('active');
+
+i = (i- 1 + slidesText.length) % slidesText.length;
+slidesText[i].classList.add('active');
+
+    }
+
+
+
+</script>
+    </body>
+</html>
